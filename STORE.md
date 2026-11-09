@@ -1,21 +1,25 @@
 # KPC-Archive as the store (Nov 9 2026)
 
-Brandon (Nov 9, 4:33-4:52 PM CST): saved outlines, saved 2-fer answers and source files live here, not only on release assets.
+Brandon (Nov 9, 4:33-4:59 PM CST): saved outlines and saved 2-fer answers are kept here. Brandon t923u (4:59 PM CST): **outline
+geometry is never committed to git** (no history growth); it lives only as compressed **release assets** on this repo, and a refresh
+REPLACES the asset. Git here keeps only small index files.
 
-| Folder | What | Written by | Size today |
+| Where | What | Written by | Size today |
 |---|---|---|---|
-| `outlines/US-XX.json.gz` | the US key's saved park outlines, one file per state (every record id it read: PAD-US, state layers, FWS) | KPC-Links `kpc-us-key.yml`, `kpc-boundary-check.yml` (nightly re-read, two states a night = each state about once a month) | 70.8 MB, largest US-AK 7.7 MB |
-| `outlines/CA-ALL.json.gz` | the Canada key's saved outlines | KPC-Links `kpc-ca-key.yml` (re-read live on the monthly run) | 6.2 MB |
-| `fers/saved-live-<area>.json.gz` | outlines the 2-fer bot had to read live (no saved copy above), re-read about once a month, a quarter per run | KPC-Data `kpc-fers.yml` | new (small) |
+| release `saved-outlines`: `US-XX.json.gz`, `CA-ALL.json.gz` | the US / Canada keys' saved park outlines (every record id they read) | KPC-Links `kpc-us-key.yml`, `kpc-boundary-check.yml` (two states a night = each state about once a month), `kpc-ca-key.yml` (monthly live read) | US 70.8 MB (largest US-AK 7.7 MB) + CA 6.2 MB = 77 MB |
+| release `fers-saved-live`: `saved-live-<area>.json.gz` | outlines the 2-fer bot had to read live (no key copy); re-read about once a month, a quarter per run | KPC-Data `kpc-fers.yml` | new, small |
+| git `index/saved-outlines.json` | per file: bytes, sha256, date, run | the same workflows | a few KB |
+| git `index/fers-saved-live.json` | per file as above + per park: record ids, outline fingerprint, date | KPC-Data `kpc-fers.yml` | under 1 MB at full size (about 1,300 parks) |
 
-Every change is a git commit, so the old copy is always in the history (no `prev-` files needed here).
+The saved 2-fer answers (per pair: fingerprint + the spots found) stay in KPC-Data `data/fers/reuse-p*-<area>.json` as before
+(git; a file over 20 MB is gzipped by the Save step). Git size of this repo is untouched by outlines; the 500 MB cap of
+`kpc_archive_move.py` counts git only.
 
-**Too big for git** (GitHub refuses a file over 100 MB; `kpc_archive.sh` stops at 95 MB): stays a release asset on KPC-Links
-`boundary-cache`. Today that is the world key's `W-DE.json.gz` (105.4 MB). World outlines (305.6 MB, W-FR 61.8 MB) are not moved yet.
+Not moved: the world outlines (305.6 MB; W-DE 105.4 MB) stay on the KPC-Links `boundary-cache` release. The KPC-Links
+`boundary-cache` release also keeps getting the US/CA files for now (about 15 workflows still read it); move those readers to
+`kpc_archive.sh get` and then stop the mirror.
 
-**Mirror:** the KPC-Links `boundary-cache` release keeps getting the same US/CA files for now, because about 15 workflows in KPC-Links
-and KPC-Data still read it. Move the readers to `kpc_archive.sh get` and then stop the mirror (a later, separate change).
-
-**Access from GitHub Actions:** secret `KPC_ARCHIVE_TOKEN` in KPC-Links and KPC-Data (or one organization secret for both):
-a fine-grained token, owner KentuckyPortableClub, repository access only KPC-Archive, permission Contents: Read and write
-(Metadata: Read comes with it). Without it every workflow prints a warning and uses the release copy; nothing fails.
+**Access from GitHub Actions:** secret `KPC_ARCHIVE_TOKEN` in KPC-Links and KPC-Data (added by Brandon Nov 9, 4:59 PM CST):
+a fine-grained token, owner KentuckyPortableClub, repository access KPC-Archive only, permission **Contents: Read and write**
+(release upload/replace + the index commit; Metadata: Read comes with it). If it is missing or cannot write, every workflow prints
+a warning and uses the KPC-Links release copy; nothing fails.
