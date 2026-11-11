@@ -7,6 +7,12 @@
    "saved": "2026-11-11",
    "sha256": "3577c239fab4f0e79ba6c5bb0b355c1b7a514d89cdb99102433b8b99d57ad639"
   },
+  "saved-live-newengland.json.gz": {
+   "bytes": 168,
+   "run": "43067966491",
+   "saved": "2026-11-11",
+   "sha256": "ec7f111014b7e072399c44f0b8e83072c83a7489dee189787215475e7fadad0a"
+  },
   "saved-live-southeast.json.gz": {
    "bytes": 514,
    "run": "43067966491",
@@ -56,5 +62,5 @@
    ]
   }
  },
- "total_bytes": 3152
+ "total_bytes": 3320
 }
