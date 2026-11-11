@@ -1,0 +1,38 @@
+{
+ "about": "Index of the saved copies on this release (the files are release assets, outside git). One row per file.",
+ "files": {
+  "saved-live-midatlantic.json.gz": {
+   "bytes": 2638,
+   "run": "43067966491",
+   "saved": "2026-11-11",
+   "sha256": "3577c239fab4f0e79ba6c5bb0b355c1b7a514d89cdb99102433b8b99d57ad639"
+  }
+ },
+ "parks": {
+  "US-12053": {
+   "date": "2026-11-11",
+   "file": "saved-live-midatlantic.json.gz",
+   "fp": "66883637bb663f89",
+   "ids": [
+    "pc|US-12053"
+   ]
+  },
+  "US-12054": {
+   "date": "2026-11-11",
+   "file": "saved-live-midatlantic.json.gz",
+   "fp": "39433e5e4df139b5",
+   "ids": [
+    "pc|US-12054"
+   ]
+  },
+  "US-5216": {
+   "date": "2026-11-11",
+   "file": "saved-live-midatlantic.json.gz",
+   "fp": "a679c7a64f939d6d",
+   "ids": [
+    "apx|US-5216"
+   ]
+  }
+ },
+ "total_bytes": 2638
+}
