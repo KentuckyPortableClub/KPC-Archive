@@ -25,6 +25,12 @@
    "saved": "2026-11-11",
    "sha256": "ca983bffa84aa86bbac45a2a0c51d13d770454641a65b1908eeb433b9c28540e"
   },
+  "saved-live-southcentral.json.gz": {
+   "bytes": 2268,
+   "run": "43067966491",
+   "saved": "2026-11-11",
+   "sha256": "de2a7a3b35654f996b23f13fff2818f5a3b5b81e64f3a312427449450db2f294"
+  },
   "saved-live-southeast.json.gz": {
    "bytes": 514,
    "run": "43067966491",
@@ -33,12 +39,44 @@
   }
  },
  "parks": {
+  "US-10272": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "b9758be20dbf0e3a",
+   "ids": [
+    "pc|US-10272"
+   ]
+  },
+  "US-10354": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "717df568cf2a04ac",
+   "ids": [
+    "pc|US-10354"
+   ]
+  },
   "US-10447": {
    "date": "2026-11-11",
-   "file": "saved-live-southeast.json.gz",
+   "file": "saved-live-southcentral.json.gz",
    "fp": "c53095b4357b7316",
    "ids": [
     "pc|US-10447"
+   ]
+  },
+  "US-11352": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "501d7dd34a507b30",
+   "ids": [
+    "apx|US-11352"
+   ]
+  },
+  "US-11768": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "52dc8497fc39d148",
+   "ids": [
+    "pc|US-11768"
    ]
   },
   "US-11955": {
@@ -65,12 +103,44 @@
     "pc|US-12054"
    ]
   },
+  "US-12109": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "b6b8c42e37474ec2",
+   "ids": [
+    "pc|US-12109"
+   ]
+  },
   "US-5216": {
    "date": "2026-11-11",
    "file": "saved-live-newyork.json.gz",
    "fp": "a679c7a64f939d6d",
    "ids": [
     "apx|US-5216"
+   ]
+  },
+  "US-6560": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "d33cc098a07aee5f",
+   "ids": [
+    "pc|US-6560"
+   ]
+  },
+  "US-6582": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "e86a2bac46b44a9e",
+   "ids": [
+    "pc|US-6582"
+   ]
+  },
+  "US-6601": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "71a44eb2b64a659b",
+   "ids": [
+    "pc|US-6601"
    ]
   },
   "US-6810": {
@@ -168,7 +238,15 @@
    "ids": [
     "pc|US-6972"
    ]
+  },
+  "US-8115": {
+   "date": "2026-11-11",
+   "file": "saved-live-southcentral.json.gz",
+   "fp": "444fb9fcae5834de",
+   "ids": [
+    "pc|US-8115"
+   ]
   }
  },
- "total_bytes": 7782
+ "total_bytes": 10050
 }
