@@ -50,10 +50,10 @@
    "sha256": "4aee2c2ea71622806cb5d89677031b9da2bda99bf4b2c7746f63bc8123bd9f8b"
   },
   "saved-live-southwest.json.gz": {
-   "bytes": 4726,
-   "run": "43109640166",
-   "saved": "2026-11-11",
-   "sha256": "5bc45c7d01eb9b80237c2b0bdabf627eb39c416f7cb06634c06e5f5c00dba255"
+   "bytes": 4727,
+   "run": "43198102518",
+   "saved": "2026-11-12",
+   "sha256": "52fa9a516de63215d0ba5621ec84ea90fcdec021e89d04d5ec9676f61d836de6"
   }
  },
  "parks": {
@@ -490,5 +490,5 @@
    ]
   }
  },
- "total_bytes": 24252
+ "total_bytes": 24253
 }
