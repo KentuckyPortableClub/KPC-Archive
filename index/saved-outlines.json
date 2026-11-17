@@ -1,0 +1,18 @@
+{
+ "about": "Index of the saved copies on this release (the files are release assets, outside git). One row per file.",
+ "files": {
+  "US-IL.json.gz": {
+   "bytes": 1774126,
+   "run": "44132394511",
+   "saved": "2026-11-17",
+   "sha256": "76499c3550593724b4e012793cc11bd7be631e4e8c93f6d4783637baf6d3abbe"
+  },
+  "US-IN.json.gz": {
+   "bytes": 363832,
+   "run": "44132394511",
+   "saved": "2026-11-17",
+   "sha256": "edf7afa592402ad1d6e19c30b8b66b67a006c703d8c976a5f4da442c3fd020e7"
+  }
+ },
+ "total_bytes": 2137958
+}
